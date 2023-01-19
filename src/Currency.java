@@ -17,18 +17,18 @@ public class Currency extends JFrame {
              *
              * @param e the event to be processed
              */
-            @Override
+
             public void actionPerformed(ActionEvent e) {
 
-                Double tot;
-                Double amount = Double.parseDouble(txtamount.getText());
+                double tot;
+                double amount = Double.parseDouble(txtamount.getText());
 
                 if (txtfrom.getText() == "USD" && txtto.getSelectedItem().toString() == "Srilankan Rupees") {
                     tot = amount * 179.50;
-                    JOptionPane.showMessageDialog(panel1, "Your Amount will be " + tot.toString());
+                    JOptionPane.showMessageDialog(panel1, "Your Amount will be " + tot);
                 } else if (txtfrom.getText() == "USD" && txtto.getSelectedItem().toString() == "Indian Rupees") {
                     tot = amount * 70.50;
-                    JOptionPane.showMessageDialog(panel1, "Your Amount will be " + tot.toString());
+                    JOptionPane.showMessageDialog(panel1, "Your Amount will be " + tot);
                 }
             }
         });
