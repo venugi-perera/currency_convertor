@@ -17,19 +17,29 @@ public class Currency extends JFrame {
              *
              * @param e the event to be processed
              */
+            double tot;
+            double amount = Double.parseDouble(txtamount.getText());
+
+                if (txtfrom.getText() == "USD" && txtto.getSelectedItem().toString() == "Srilankan Rupees") {
+                tot = amount * 179.50;
+                JOptionPane.showMessageDialog(panel1, "Your Amount will be " + tot);
+            } else if (txtfrom.getText() == "USD" && txtto.getSelectedItem().toString() == "Indian Rupees") {
+                tot = amount * 70.50;
+                JOptionPane.showMessageDialog(panel1, "Your Amount will be " + tot);
+            }
 
             public void actionPerformed(ActionEvent e) {
 
-                double tot;
-                double amount = Double.parseDouble(txtamount.getText());
-
-                if (txtfrom.getText() == "USD" && txtto.getSelectedItem().toString() == "Srilankan Rupees") {
-                    tot = amount * 179.50;
-                    JOptionPane.showMessageDialog(panel1, "Your Amount will be " + tot);
-                } else if (txtfrom.getText() == "USD" && txtto.getSelectedItem().toString() == "Indian Rupees") {
-                    tot = amount * 70.50;
-                    JOptionPane.showMessageDialog(panel1, "Your Amount will be " + tot);
-                }
+//                double tot;
+//                double amount = Double.parseDouble(txtamount.getText());
+//
+//                if (txtfrom.getText() == "USD" && txtto.getSelectedItem().toString() == "Srilankan Rupees") {
+//                    tot = amount * 179.50;
+//                    JOptionPane.showMessageDialog(panel1, "Your Amount will be " + tot);
+//                } else if (txtfrom.getText() == "USD" && txtto.getSelectedItem().toString() == "Indian Rupees") {
+//                    tot = amount * 70.50;
+//                    JOptionPane.showMessageDialog(panel1, "Your Amount will be " + tot);
+//                }
             }
         });
     }
